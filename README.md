@@ -1,30 +1,55 @@
-# The brain for Mall Chat
+# Synthiq - Multi-Embedded AI Smart Storage
 
-Utilizes the power of GenerativeAI to store and retrieve unstructured information. Think of it as Obsidian, but turbocharged with AI capabilities.
+## Important
 
-## Key Features 🎯
+When installing this app and running the frontend and backend on different domain or sub-domains - Make sure to update the cors exceptions in
 
-- **Universal Data Acceptance**: Mall Chat can handle almost any type of data you throw at it. Text, images, code snippets, we've got you covered.
-- **Generative AI**: Mall Chat employs advanced AI to assist you in generating and retrieving information.
-- **Fast and Efficient**: Designed with speed and efficiency at its core. Mall Chat ensures rapid access to your data.
+```sh
+backend
+|- middlewares
+| |- cors.py
+```
+
+Update to look like
+
+```py
+// cors.py
+origins = [
+    "https://sub.domain.com",
+    "https://sub.domain.com:5050",
+    "https://sub.domain.com:5051",
+    "https://sub.domain.com",
+    "http://www.sub.domain.com",
+    "*"
+]
+```
+
+
+
+This application is like having Chat GPT but trained on whatever data you choose to train it on
+
+## Key Features
+
+- **Universal Data Acceptance**: Synthiq can handle almost any type of data you throw at it. Text, images, code snippets, we've got you covered.
+- **Generative AI**: Synthiq employs advanced AI to assist you in generating and retrieving information.
+- **Fast and Efficient**: Designed with speed and efficiency at its core. Synthiq ensures rapid access to your data.
 - **Secure**: Your data, your control. Always.
-- **OS Compatible**: Ubuntu 22 or upper.
+- **OS Compatible**: Linux
 - **File Compatibility**: 
   - Text
   - Markdown
   - PDF
   - Powerpoint
-  - Excel (Not Yet)
   - Csv
   - Word
   - Audio
   - Video
 
-## Getting Started: 🚀
+## Getting Started:
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites 📋
+### Prerequisites
 
 Before you proceed, ensure you have the following installed:
 
@@ -37,23 +62,21 @@ Additionally, you'll need a [Supabase](https://supabase.com/) account for:
 - Supabase Project API key
 - Supabase Project URL
 
-### Installation Steps 💽
-
-- **Step 0**: If needed, the installation is explained on Youtube [here](https://youtu.be/rC-s4QdfY80)
+### Installation Steps 
 
 - **Step 1**: Clone the repository using **one** of these commands:
 
   - If you don't have an SSH key set up:
   
   ```bash
-  mkdir brain && cd brain
-  git clone https://github.com/charlpcronje/brain.bots.mc.cronje.me.git .
+  mkdir synthiq && cd synthiq
+  git clone https://github.com/charl-zestcode/synthiq.git .
   ```
   - If you have an SSH key set up or want to add it ([guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account))
   
   ```bash
-   mkdir brain && cd brain
-  git clone git@github.com:StanGirard/brain.bots.mc.cronje.me.git .
+  mkdir brain && cd brain
+  git clone git@github.com:charl-zestcode/synthiq.git .
   ```
 
 - **Step 2**: Use the install helper
